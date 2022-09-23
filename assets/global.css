@@ -1,0 +1,235 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none
+}
+
+
+:root {
+    --primary: #E66F05;
+    --secondary: #4B1CE6;
+    --highlight: #1CE627;
+}
+
+input, button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    color: unset
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+header, main { margin-bottom: 2em }
+
+.alt-color {
+    color: var(--primary) !important
+}
+
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.game-title {
+    color: var(--primary);
+    font-weight: 600
+}
+
+.contact-img {
+    width: 50px;
+    margin-right: 1rem
+}
+
+
+nav ul, .icons {
+    display: flex;
+    align-items: center;
+}
+
+    nav li, .icons li {
+        margin-right: 1em;
+        position: relative
+    }
+
+        nav li input {
+            font-size: 1em;
+            cursor: pointer;
+            transition: color .5s ease-out;
+        }
+
+            nav li input.active {
+                color: var(--secondary)
+            }
+
+            nav li input:hover, .icons li:hover {
+                color: var(--secondary) !important
+            }
+
+        nav li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 0;
+            background-color: var(--secondary);
+            transition: width .5s ease-out;
+        }
+
+        nav li:hover::after {
+            width: 100%
+        }
+
+
+footer {
+    padding: 3em !important
+}
+
+    footer h2 {
+        color: var(--primary);
+        position: relative;
+    }
+
+        footer h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 0;
+            background-color: var(--primary);
+            transition: width .5s ease-out;
+        }
+
+        footer h2:hover::after {
+            width: 100%
+        }
+
+.icons li img {
+    cursor: pointer;
+    width: 40px
+}
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+    main > div { flex-basis: 100px }
+    .register-container { flex-grow: 1 }
+    .contact-list-container { flex-grow: 3 }
+
+
+
+.register-container {
+    padding: 1em;
+    border-right: solid 2px var(--secondary);
+    margin-right: 1.5em
+}
+
+.section-header {
+    color: var(--primary);
+    margin-bottom: 1em;
+    font-size: 2em
+}
+
+.calendar{ margin: .5em 0}
+
+.input-section {
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.input-section span {
+    font-weight: 600;
+    color: var(--secondary)
+}
+
+.name-input {
+    margin-left: .5em;
+    border-bottom:solid 1px black
+}
+
+
+.register-btn {
+    padding: .5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color .5s ease-in-out;
+    transition: color .5s ease-in-out;
+    cursor: pointer
+}
+
+.register-btn {
+    font-size: 1em;
+    color: var(--highlight);
+    border: solid 2px var(--highlight);
+}
+
+.register-btn:hover {
+    background-color: var(--highlight);
+    color: white
+}
+
+
+.contact-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+    .contact-list-container > div{
+        flex-basis: 400px;
+    }
+
+.contact-container {
+    margin-left: 2em;
+    margin-bottom: 2em;
+    position: relative;
+    padding-bottom: 2em;
+}
+
+    .contact-container::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--secondary);
+    }
+
+    .contact-container:last-child::after { display: none }
+
+    .contact-container ul { margin-left: 1em }
+
+    .contact-container ul li { margin-bottom: .5em }
+
+        .contact-container ul li:first-child span { font-weight: 600 }
+        .alt-li { font-weight: 400 !important }
+
+.contact-name {
+    color: var(--secondary);
+    margin-bottom: 0.5em;
+}
